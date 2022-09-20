@@ -1,0 +1,45 @@
+DISPLAY "Daftar Restoran"
+WRITE "Detail Restoran"
+WHILE "Click" on "Restoran"
+Do
+    DISPLAY "Daftar menu"
+
+    WHILE "Click" on "Menu"
+    Do
+        WRITE "Detail menu"
+
+WHILE "Click" on "Checkout"
+Do
+    DISPLAY "Input Address"
+    WRITE "Input Address"
+    STORE "Input Address"
+    DISPLAY "Location"
+
+ADD PROCEDURE Summary(price1, price2, price3, price4)
+    STORE "result" with price1 plus price2 plus price3 plus price4
+    PRINT "result"
+END PROCEDURE
+
+CALL Summary()
+
+If "Payment Method" equal "E-Wallet"
+    DISPLAY "E-Wallet Payment"
+    STORE "E-Wallet Payent"
+    ELSE 
+    DISPLAY "Proceed Order"
+
+WRITE "Proceed Order"
+
+DISPLAY "Sending Order"
+WRITE "Sending Order"
+
+DISPLAY "Order Arrived"
+WRITE "Order Arrived"
+
+If "Payment Method" equal "Cash"
+    DISPLAY "Complete Payment"
+    WRITE "Complete Payment"
+    ELSE
+    DISPLAY "Order Complete"
+
+PRINT "Order Complete"
